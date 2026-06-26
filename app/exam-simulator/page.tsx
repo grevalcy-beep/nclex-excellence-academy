@@ -1,0 +1,3 @@
+import Nav from '@/components/Nav';
+const modes=['CAT-Style Practice','Timed Readiness Exam','Custom Topic Exam','Incorrect Questions Review'];
+export default function ExamSimulator(){return <><Nav/><main className="mx-auto max-w-6xl px-6 py-12"><span className="badge">Exam Simulator</span><h1 className="mt-4 text-4xl font-black md:text-5xl">Practice like exam day before exam day.</h1><p className="mt-4 text-slate-600">Build timed exams, track readiness, review rationales, and identify weak areas.</p><div className="mt-8 grid gap-5 md:grid-cols-4">{modes.map(m=><div className="card p-6" key={m}><h2 className="text-xl font-black">{m}</h2><p className="mt-2 text-slate-600">Ready for database and scoring-engine integration.</p></div>)}</div></main></>}
