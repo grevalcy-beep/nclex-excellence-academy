@@ -1,30 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{--blue:#082f6f;--blue2:#0B4D8C;--gold:#D4AF37;--gold2:#b8860b;--dark:#07182f}
+:root{--blue:#082f6f;--blue2:#0B4D8C;--navy:#03265d;--gold:#D4AF37;--gold2:#b8860b;--dark:#07182f}
 *{box-sizing:border-box}
 body{margin:0;background:#f8fbff;color:#0A192F}
 a{text-decoration:none}
-.card{background:white;border:1px solid #e6eef8;border-radius:22px;box-shadow:0 10px 30px rgba(10,25,47,.06)}
+.card{background:white;border:1px solid #e6eef8;border-radius:18px;box-shadow:0 10px 30px rgba(10,25,47,.06)}
+.brand-nav{background:linear-gradient(180deg,#063878 0%,#03265d 100%);box-shadow:0 8px 24px rgba(3,38,93,.22)}
+.nav-active{position:relative;color:#f4c24f}
+.nav-active:after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:3px;border-radius:99px;background:#f4c24f}
+.login-button{display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:linear-gradient(135deg,#f7c955,#c89119);color:#08234f;padding:.82rem 1.1rem;font-size:.86rem;font-weight:900;text-transform:uppercase;box-shadow:0 10px 20px rgba(0,0,0,.18)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:.85rem 1.2rem;font-weight:800;line-height:1}
 .btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;box-shadow:0 12px 26px rgba(8,47,111,.22)}
 .btn-green{background:#11A36A;color:white}
-.btn-gold{background:linear-gradient(135deg,#f6d678,var(--gold2));color:#07182f;box-shadow:0 12px 26px rgba(184,134,11,.28)}
-.btn-light{background:white;color:var(--blue)}
-.btn-outline-light{border:1px solid rgba(255,255,255,.55);color:white}
 .badge{display:inline-flex;border-radius:999px;padding:.35rem .7rem;background:#eaf7f1;color:#08734a;font-weight:800;font-size:.8rem}
-.badge-gold{background:rgba(255,255,255,.12);border:1px solid rgba(246,214,120,.5);color:#ffe59a}
-.badge-blue{background:#eaf1ff;color:var(--blue)}
-.hero-shell{position:relative;overflow:hidden;background:radial-gradient(circle at 72% 22%,rgba(212,175,55,.28),transparent 34%),linear-gradient(135deg,#07182f 0%,#082f6f 48%,#0B4D8C 100%)}
-.hero-shell:after{content:"";position:absolute;inset:auto -10% -32% -10%;height:46%;background:rgba(255,255,255,.08);transform:rotate(-3deg)}
-.hero-shell>div{position:relative;z-index:1}
-.brand-card{border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.08));padding:18px;box-shadow:0 24px 80px rgba(0,0,0,.28)}
-.hero-stat{display:grid;gap:.35rem;border:1px solid rgba(255,255,255,.22);border-radius:18px;background:rgba(255,255,255,.1);padding:16px;color:white}
-.hero-stat b{font-size:1rem}
-.hero-stat span{color:#dbeafe;font-size:.9rem}
+.model-hero{position:relative;overflow:hidden;background:linear-gradient(90deg,#ffffff 0%,#f3f8ff 54%,#dcecff 100%)}
+.model-hero:before{content:"";position:absolute;inset:auto 0 0 0;height:145px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(238,246,255,.9));clip-path:ellipse(70% 72% at 20% 100%)}
+.hero-curve{position:absolute;right:-130px;bottom:-130px;width:500px;height:500px;border:34px solid #0b4d8c;border-top-color:#d4af37;border-left-color:transparent;border-radius:50%;opacity:.95}
+.hero-logo-panel{position:relative;z-index:1}
+.hero-message{position:relative;z-index:1;min-height:480px;display:grid;align-items:center}
+.copy-block{position:relative;z-index:2;max-width:440px}
+.copy-block h1{font-size:clamp(2.1rem,4vw,3.6rem);font-weight:950;line-height:1.08;text-transform:uppercase;color:#082f6f;letter-spacing:.01em}
+.copy-block h1 span{display:block;margin-top:.35rem;color:#b8860b;font-family:Georgia,serif;font-size:.78em;font-style:italic;font-weight:700;text-transform:none}
+.copy-block p{margin-top:1.6rem;color:#1d3260;font-size:1.1rem;line-height:1.75}
+.journey-button{display:inline-flex;align-items:center;gap:.8rem;margin-top:1.8rem;border-radius:999px;background:linear-gradient(135deg,#092e6d,#041d49);color:white;padding:.95rem 1.35rem;font-weight:950;text-transform:uppercase;box-shadow:0 12px 24px rgba(8,47,111,.24)}
+.journey-button span{color:#f4c24f;font-size:1.4rem}
+.nurse-hero{position:absolute;right:0;bottom:-6px;z-index:1;max-height:520px;max-width:48%;object-fit:contain;filter:drop-shadow(0 22px 28px rgba(3,38,93,.2))}
+.feature-band{background:linear-gradient(180deg,#063878 0%,#03265d 100%);border-top:3px solid #d4af37;border-bottom:3px solid #d4af37}
+.feature-band>div{transform:translateY(-26px);border:2px solid #d4af37;border-radius:24px;background:linear-gradient(180deg,#073879,#03265d);box-shadow:0 20px 35px rgba(3,38,93,.24);overflow:hidden}
+.feature-item{display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:center;padding:26px 28px;color:white}
+.feature-item+article{border-left:1px solid rgba(255,255,255,.18)}
+.feature-icon{display:grid;width:58px;height:58px;place-items:center;border:3px solid rgba(57,153,255,.75);border-radius:50%;background:#0a4692;color:white;font-size:1.75rem;box-shadow:inset 0 0 18px rgba(255,255,255,.14)}
+.feature-item h2{margin:0;color:white;font-size:1rem;font-weight:950;text-transform:uppercase}
+.feature-item p{margin:.45rem 0 0;color:#e7f1ff;line-height:1.55}
+.why-section{position:relative;background:white}
+.section-kicker{display:inline-flex;align-items:center;gap:18px;color:#b8860b;font-weight:950;text-transform:uppercase;letter-spacing:.12em}
+.section-kicker:before,.section-kicker:after{content:"";width:56px;height:2px;background:#d4af37}
+.why-section h2{margin-top:1rem;color:#082f6f;font-family:Georgia,serif;font-size:clamp(2.2rem,4vw,3rem);font-weight:950}
 .brand-feature{border-top:4px solid var(--gold)}
-.contact-panel{display:grid;gap:14px}
-.contact-panel div{display:grid;gap:4px;border:1px solid #e6eef8;border-radius:18px;background:#f8fbff;padding:20px}
-.contact-panel b{color:var(--blue);font-size:1.05rem}
-.contact-panel span{color:#526274}
 .site-footer{background:linear-gradient(135deg,#07182f,var(--blue))}
+@media (max-width:980px){
+  .hero-message{min-height:auto;padding-bottom:300px}
+  .nurse-hero{max-width:70%;right:0;max-height:330px}
+  .feature-band>div{transform:none;border-radius:0;border-left:0;border-right:0}
+  .feature-item+article{border-left:0;border-top:1px solid rgba(255,255,255,.18)}
+}
+@media (max-width:640px){
+  .login-button{padding:.74rem .9rem;font-size:.75rem}
+  .copy-block h1{font-size:2.25rem}
+  .hero-message{padding-bottom:250px}
+  .nurse-hero{max-width:85%;max-height:285px}
+  .feature-item{grid-template-columns:58px 1fr;padding:22px}
+}
