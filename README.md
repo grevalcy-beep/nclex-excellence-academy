@@ -1,17 +1,58 @@
 # NCLEX Excellence Academy
 
-NCLEX Excellence Academy is a Next.js platform for NCLEX preparation, including student learning pages, QBank, exam simulator, AI tutor roadmap, shop, admin dashboard, and Supabase-ready database schema.
+English-only MVP for an original NCLEX preparation platform with student portal, admin management, QBank, exam simulator, AI tutor roadmap, and medical shop.
+
+## Pages
+
+- Home
+- About
+- Courses
+- QBank
+- Exam Simulator
+- AI Tutor
+- Shop
+- Student Dashboard
+- Admin Dashboard
+- Admin Students
+- Admin Questions
+- Admin Shop
+- Pricing
+- Blog
+- FAQ
+- Contact
+- Login
+
+## Core Modules
+
+- Student portal
+- Admin management
+- Instructor/team leader-ready structure
+- QBank and NGN question builder
+- Exam simulator
+- Readiness analytics
+- Shop products, orders, and inventory
+- Payment-ready schema
 
 ## Tech Stack
 
 - Next.js App Router
-- React
 - Tailwind CSS
-- Supabase-ready SQL schema
+- Supabase-ready Postgres schema
+- Vercel-ready deployment
 
-## Local Development
+## Run Locally
 
 ```bash
 npm install
 npm run dev
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Supabase
+
+Use `supabase/schema.sql` for the base database schema.
