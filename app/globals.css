@@ -1,8 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{--blue:#0B4D8C;--green:#11A36A;--gold:#D4AF37;--dark:#0A192F}
-body{background:#f8fbff;color:#0A192F}
+:root{--blue:#082f6f;--blue2:#0B4D8C;--gold:#D4AF37;--gold2:#b8860b;--dark:#07182f}
+*{box-sizing:border-box}
+body{margin:0;background:#f8fbff;color:#0A192F}
+a{text-decoration:none}
 .card{background:white;border:1px solid #e6eef8;border-radius:22px;box-shadow:0 10px 30px rgba(10,25,47,.06)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:.85rem 1.2rem;font-weight:700}
-.btn-primary{background:#0B4D8C;color:white}.btn-green{background:#11A36A;color:white}.badge{border-radius:999px;padding:.35rem .7rem;background:#eaf7f1;color:#08734a;font-weight:700;font-size:.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:.85rem 1.2rem;font-weight:800;line-height:1}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;box-shadow:0 12px 26px rgba(8,47,111,.22)}
+.btn-green{background:#11A36A;color:white}
+.btn-gold{background:linear-gradient(135deg,#f6d678,var(--gold2));color:#07182f;box-shadow:0 12px 26px rgba(184,134,11,.28)}
+.btn-light{background:white;color:var(--blue)}
+.btn-outline-light{border:1px solid rgba(255,255,255,.55);color:white}
+.badge{display:inline-flex;border-radius:999px;padding:.35rem .7rem;background:#eaf7f1;color:#08734a;font-weight:800;font-size:.8rem}
+.badge-gold{background:rgba(255,255,255,.12);border:1px solid rgba(246,214,120,.5);color:#ffe59a}
+.badge-blue{background:#eaf1ff;color:var(--blue)}
+.hero-shell{position:relative;overflow:hidden;background:radial-gradient(circle at 72% 22%,rgba(212,175,55,.28),transparent 34%),linear-gradient(135deg,#07182f 0%,#082f6f 48%,#0B4D8C 100%)}
+.hero-shell:after{content:"";position:absolute;inset:auto -10% -32% -10%;height:46%;background:rgba(255,255,255,.08);transform:rotate(-3deg)}
+.hero-shell>div{position:relative;z-index:1}
+.brand-card{border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.08));padding:18px;box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.hero-stat{display:grid;gap:.35rem;border:1px solid rgba(255,255,255,.22);border-radius:18px;background:rgba(255,255,255,.1);padding:16px;color:white}
+.hero-stat b{font-size:1rem}
+.hero-stat span{color:#dbeafe;font-size:.9rem}
+.brand-feature{border-top:4px solid var(--gold)}
+.contact-panel{display:grid;gap:14px}
+.contact-panel div{display:grid;gap:4px;border:1px solid #e6eef8;border-radius:18px;background:#f8fbff;padding:20px}
+.contact-panel b{color:var(--blue);font-size:1.05rem}
+.contact-panel span{color:#526274}
+.site-footer{background:linear-gradient(135deg,#07182f,var(--blue))}
