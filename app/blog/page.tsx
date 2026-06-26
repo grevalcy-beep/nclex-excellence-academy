@@ -1,0 +1,3 @@
+import Nav from '@/components/Nav';
+const posts=['How to Build a 90-Day NCLEX Study Plan','How to Review Rationales the Right Way','Top Safety Principles Every NCLEX Candidate Must Know'];
+export default function Blog(){return <><Nav/><main className="mx-auto max-w-6xl px-6 py-12"><span className="badge">NCLEX Blog</span><h1 className="mt-4 text-4xl font-black">Study strategy and nursing success articles.</h1><div className="mt-8 grid gap-5 md:grid-cols-3">{posts.map(p=><article className="card p-6" key={p}><h2 className="text-xl font-black">{p}</h2><p className="mt-2 text-slate-600">Educational article placeholder ready for publishing from the admin dashboard.</p><button className="btn mt-5">Read Article</button></article>)}</div></main></>}
