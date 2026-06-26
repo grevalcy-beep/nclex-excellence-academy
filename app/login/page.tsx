@@ -1,0 +1,2 @@
+import Nav from '@/components/Nav';
+export default function Login(){return <><Nav/><main className="mx-auto max-w-md px-6 py-10"><div className="card p-7"><h1 className="text-3xl font-black">Login</h1><p className="mt-2 text-slate-600">Student and admin access.</p><input className="mt-6 w-full rounded-xl border p-3" placeholder="Email"/><input className="mt-3 w-full rounded-xl border p-3" placeholder="Password" type="password"/><button className="btn btn-primary mt-5 w-full justify-center">Sign In</button></div></main></>}
