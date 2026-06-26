@@ -1,0 +1,3 @@
+import Nav from '@/components/Nav';
+const faqs=[['Is this for RN and PN?','Yes. The platform is structured for NCLEX-RN and NCLEX-PN preparation.'],['Will it include NGN?','Yes. The QBank is designed for NGN case studies, SATA, bow-tie, matrix, cloze, and prioritization.'],['Can admins manage the shop?','Yes. Product, order, and inventory management are included in the admin roadmap.']];
+export default function FAQ(){return <><Nav/><main className="mx-auto max-w-4xl px-6 py-12"><h1 className="text-4xl font-black">FAQ</h1><div className="mt-8 space-y-4">{faqs.map(([q,a])=><div className="card p-6" key={q}><h2 className="text-xl font-black">{q}</h2><p className="mt-2 text-slate-600">{a}</p></div>)}</div></main></>}
