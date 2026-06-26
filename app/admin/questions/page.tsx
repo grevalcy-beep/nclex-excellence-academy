@@ -1,0 +1,2 @@
+import Nav from '@/components/Nav';
+export default function AdminQuestions(){return <><Nav/><main className="mx-auto max-w-5xl px-6 py-12"><h1 className="text-4xl font-black">Question Builder</h1><p className="mt-3 text-slate-600">Create NCLEX, NGN, SATA, bow-tie, matrix, and case-study questions.</p><div className="card mt-8 p-6"><input className="w-full rounded-xl border p-3" placeholder="Question topic"/><textarea className="mt-3 h-32 w-full rounded-xl border p-3" placeholder="Question stem"/><button className="btn btn-primary mt-4">Save Question</button></div></main></>}
